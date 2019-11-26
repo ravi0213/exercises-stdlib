@@ -36,5 +36,8 @@ object Test {
     }
     println("x: " + x)
 
+    println("remove and sum [4, 1, 2, 3]: " + CustomList.sum(CustomList.tail(CustomList(4, 1, 2, 3))))
+    println("replace and sum [4, 1, 2, 3]: " + CustomList.sum(CustomList.setHead(6, CustomList(4, 1, 2, 3))))
+
   }
 }

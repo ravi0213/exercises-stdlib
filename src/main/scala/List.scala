@@ -19,6 +19,16 @@ object CustomList {
     case Cons(x, xs) => x.x + ", " + join(xs)
   }
 
+  def tail[A](list: CustomList[A]): CustomList[A] = list match {
+    case Nil => Nil
+    case Cons(_, xs) => xs
+  }
+
+  def setHead[A](a: A, list: CustomList[A]): CustomList[A] = list match {
+    case Nil => CustomList(a)
+    case Cons(_, xs) => Cons(a, xs)
+  }
+
   def apply[A](as: A*): CustomList[A] = {
     if(as.isEmpty) Nil
     else Cons(as.head, apply(as.tail: _*))
