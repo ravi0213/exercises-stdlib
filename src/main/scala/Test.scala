@@ -38,6 +38,28 @@ object Test {
 
     println("remove and sum [4, 1, 2, 3]: " + CustomList.sum(CustomList.tail(CustomList(4, 1, 2, 3))))
     println("replace and sum [4, 1, 2, 3]: " + CustomList.sum(CustomList.setHead(6, CustomList(4, 1, 2, 3))))
+    println("remove 1: " + CustomList.drop(CustomList(4, 1, 2, 3), 1))
+    println("remove 5: " + CustomList.dropWhile(CustomList(4, 2, 2, 3))(x => x%2 == 1))
+
+    println("init: " + CustomList.init(CustomList(1, 2, 3, 4)))
+
+    println("length: " + CustomList.length(CustomList(1, 2, 3, 4)))
+
+    println("reverse: " + CustomList.reverse(CustomList(1, 2, 3, 4)))
+
+    println("append: " + CustomList.append(CustomList(1, 2, 3, 4), 6))
+
+    println("appendAll: " + CustomList.appendAll(CustomList(CustomList(1, 2), CustomList(3, 4))))
+
+    println("addOne: " + CustomList.addOne(CustomList(1, 2)))
+
+    println("doubleToString: " + CustomList.doubleToString(CustomList(1.0, 2.0)))
+
+    println("map: " + CustomList.map(CustomList('a', 'b', 'c'))(x => x.toInt))
+
+    println("filter: " + CustomList.filter(CustomList(1,2,3,4))(x => x%2 == 0))
+
+    println("flatmap: " + CustomList.flatMap(CustomList(1,2,3))(i => CustomList(i, i)))
 
   }
 }
